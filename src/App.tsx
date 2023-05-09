@@ -1,26 +1,27 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, Navigate, Outlet, useNavigate } from "react-router-dom"
+import { ConfigProvider, theme } from 'antd';
+import { ProtectedRoutes, PublicRoutes } from './utils/route';
+import { Main } from './components/main';
+import { HomePage } from './page/home';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (<ConfigProvider theme={{
+    algorithm: theme.darkAlgorithm,
+  }}>
+    <Routes>
+      {/** Protected Routes */}
+      {/** Wrap all Route under ProtectedRoutes element */}
+      {/* <Route path='*' element={<Navigate replace to="home" />} /> */}
+      <Route path="/" element={<Main />}>
+        <Route path="/" element={<PublicRoutes />}>
+          <Route path="home" element={<HomePage />} />
+        </Route>
+      </Route>
+    </Routes>
+  </ConfigProvider>);
 }
 
 export default App;
