@@ -14,7 +14,7 @@ function App() {
     <Routes>
       {/** Protected Routes */}
       {/** Wrap all Route under ProtectedRoutes element */}
-      {/* <Route path='*' element={<Navigate replace to="home" />} /> */}
+      <Route path='*' element={<Navigate replace to="home" />} />
       <Route path="/" element={<Main />}>
         <Route path="/" element={<PublicRoutes />}>
           <Route path="home" element={<HomePage />} />
