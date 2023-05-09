@@ -12,5 +12,6 @@ export const ProtectedRoutes = (props: any) => {
 }
 
 export const PublicRoutes = (props: any) => {
+    console.log({props })
     return false ? <Navigate to="/home" /> : <Outlet />
 }

@@ -8,20 +8,21 @@ import { Main } from './components/main';
 import { HomePage } from './page/home';
 
 function App() {
-  return (<ConfigProvider theme={{
-    algorithm: theme.darkAlgorithm,
-  }}>
-    <Routes>
-      {/** Protected Routes */}
-      {/** Wrap all Route under ProtectedRoutes element */}
-      <Route path='*' element={<Navigate replace to="home" />} />
-      <Route path="/" element={<Main />}>
-        <Route path="/" element={<PublicRoutes />}>
-          <Route path="home" element={<HomePage />} />
+  return (
+    <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
+      <Routes>
+        {/** Protected Routes */}
+        {/** Wrap all Route under ProtectedRoutes element */}
+        <Route path="/" element={<Main />}>
+          <Route path="/" element={<ProtectedRoutes />}>
+            <Route path="" element={<HomePage />} />
+          </Route>
         </Route>
-      </Route>
-    </Routes>
-  </ConfigProvider>);
+        {/** Fallback route for all other routes */}
+        <Route path="*" element={<Navigate replace to="/" />} />
+      </Routes>
+    </ConfigProvider>
+  );
 }
 
 export default App;
