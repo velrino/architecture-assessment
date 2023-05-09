@@ -1,8 +1,9 @@
-import { Card } from "antd";
+import { Badge, Card, Col, Collapse, Row } from "antd";
 import { useEffect, useState } from "react";
 
 export function RenderComponent({ formData }: any) {
     const [formDataArray, setFormDataArray] = useState<any[]>([]);
+    const [groupData, setGroupData] = useState<any>({});
     const [totalDays, setTotalDays] = useState<number>(0);
     const [totalMonth, setTotalMonth] = useState<number>(0);
     const [totalMonthDays, setTotalMonthDays] = useState<number>(0);
@@ -12,7 +13,25 @@ export function RenderComponent({ formData }: any) {
     }
 
     useEffect(() => {
-        const arr = Object.entries(formData).map(([name, value]) => ({ name, value, time: randomBetween(5, 90) }));
+        const arr = Object.entries(formData).map(([name, value]) => {
+            const nameSplited = name.split(".")
+            return { name: nameSplited[1], group: nameSplited[0], value, time: randomBetween(5, 90) }
+        });
+
+        const groupedArr = arr.reduce((result: any, obj) => {
+            const group = obj.group;
+            if (!result[group]) {
+                result[group] = [];
+            }
+            result[group].push(obj);
+            return result;
+        }, {});
+
+        const test = Object.keys(groupedArr)
+        console.log({ test })
+
+        setGroupData(groupedArr)
+
         const currentTotalDays = arr.reduce((total, { time }) => total + time, 0);
         const currentTotalMonth = Math.floor(currentTotalDays / 30.44);
         const currentTotalMonthDays = (currentTotalDays % 30.44);
@@ -31,11 +50,25 @@ export function RenderComponent({ formData }: any) {
             <h1>Resultado {totalDays} dias</h1>
             <p>{totalMonth} meses e {totalMonthDays.toFixed(0)} dias</p>
         </>}>
-            {
-                formDataArray.map((item, index) => (<div key={index}>
-                    {item.name} : {item.value} = <b>{item.time} dias</b>
-                </div>))
-            }
+            <Collapse activeKey={Object.keys(groupData).map((currentItem, currentIndex) => currentIndex)}>
+                {
+                    Object.keys(groupData).map((currentItem, currentIndex) => (<Collapse.Panel header={currentItem} key={currentIndex}>
+                        {/* <p>{groupData[item]}</p> */}
+                        <Row gutter={10}>
+                            {
+                                groupData[currentItem].map((item: any, index: any) => (<Col className="margin-bottom-small" key={index} xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 8 }} lg={{ span: 8 }}>
+                                    <Card>
+                                        <Badge count={item.name} color="green" />
+                                        <p>{item.value}</p>
+                                        <b>{item.time} dias</b>
+                                    </Card>
+                                </Col>))
+                            }
+                        </Row>
+                    </Collapse.Panel>))
+                }
+            </Collapse>
+
         </Card>
     </>)
 };

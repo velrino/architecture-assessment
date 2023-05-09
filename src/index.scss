@@ -36,10 +36,24 @@ code {
 }
 
 .custom-radio {
+  .ant-radio-button-checked, .ant-radio-button-wrapper-checked {
+    background-color: #38d430 !important;
+    color: white;
+    border: 0px;
+    border-radius: 2rem;
+    border-color: transparent !important;
+  }
+
+  .ant-radio-button-wrapper:hover {
+    color: #38d430;
+  }
+  
   label {
     margin-bottom: 0.5rem;
     display: block;
     border-radius: 0.5rem !important;
+
+
 
     &.ant-radio-button-wrapper {
       border-inline-start-width: 1px;
