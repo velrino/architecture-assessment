@@ -9,7 +9,7 @@ import { HomePage } from './page/home';
 
 function App() {
   return (
-    <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
+    <ConfigProvider theme={{ algorithm: theme.defaultAlgorithm }}>
       <Routes>
         {/** Protected Routes */}
         {/** Wrap all Route under ProtectedRoutes element */}
