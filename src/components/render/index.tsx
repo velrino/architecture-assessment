@@ -57,9 +57,8 @@ export function RenderComponent({ formData }: any) {
                         <Row gutter={10}>
                             {
                                 groupData[currentItem].map((item: any, index: any) => (<Col className="margin-bottom-small" key={index} xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 8 }} lg={{ span: 8 }}>
-                                    <Card>
-                                        <Badge count={item.name} color="green" />
-                                        <p>{item.value}</p>
+                                    <Card title={item.name} className="custom-card">
+                                        <p className="text-ellipsis">{item.value}</p>
                                         <b>{item.time} dias</b>
                                     </Card>
                                 </Col>))

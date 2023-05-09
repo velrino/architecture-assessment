@@ -1,3 +1,5 @@
+$primary-color: #25aa1e;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -36,8 +38,10 @@ code {
 }
 
 .custom-radio {
-  .ant-radio-button-checked, .ant-radio-button-wrapper-checked {
-    background-color: #38d430 !important;
+
+  .ant-radio-button-checked,
+  .ant-radio-button-wrapper-checked {
+    background-color: $primary-color !important;
     color: white;
     border: 0px;
     border-radius: 2rem;
@@ -45,9 +49,9 @@ code {
   }
 
   .ant-radio-button-wrapper:hover {
-    color: #38d430;
+    color: $primary-color;
   }
-  
+
   label {
     margin-bottom: 0.5rem;
     display: block;
@@ -67,9 +71,21 @@ code {
 
 /* estilos para desktop e tablet */
 .result-form {
-  @media (min-width: 768px) {
-    position: fixed;
-    right: 0;
-    width: 100%;
-  }
+  // @media (min-width: 768px) {
+  //   position: fixed;
+  //   right: 0;
+  //   width: 100%;
+  // }
+}
+
+.ant-card-head {
+  background-color: $primary-color !important;
+  color: white !important
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  // max-width: 10px;
 }
