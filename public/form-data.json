@@ -1,0 +1,48 @@
+{
+  "principal": [
+    {
+      "label": "Qual é o tamanho do projeto que você deseja realizar?",
+      "name": "principal.projectSize",
+      "options": [
+        { "label": "Pequeno", "value": "small" },
+        { "label": "Médio", "value": "medium" },
+        { "label": "Grande", "value": "large" },
+        { "label": "Extremamente grande", "value": "extremelyLarge" }
+      ]
+    },
+    {
+      "label": "Qual é o objetivo principal da sua arquitetura de software?",
+      "name": "principal.architectureObjective",
+      "options": [
+        { "label": "Escalabilidade", "value": "scalability" },
+        { "label": "Manutenção", "value": "maintenance" },
+        { "label": "Desempenho", "value": "performance" },
+        { "label": "Outro", "value": "other" }
+      ]
+    }
+  ],
+  "security": [
+    {
+      "label": "Qual é o nível de sensibilidade dos dados manipulados pelo seu sistema?",
+      "name": "security.securityArchitecture",
+      "options": [
+        { "label": "Baixa", "value": "low" },
+        { "label": "Média", "value": "medium" },
+        { "label": "Alta", "value": "high" },
+        { "label": "Não sei", "value": "dontKnow" }
+      ]
+    },
+    {
+      "label": "Qual é a política de autenticação de usuários do seu sistema?",
+      "name": "security.authenticationPolicy",
+      "options": [
+        { "label": "Senha única", "value": "uniquePassword" },
+        { "label": "Senha e autenticação de dois fatores", "value": "passwordAndTwoFactorAuthentication" },
+        { "label": "Autenticação com certificado digital", "value": "digitalCertificateAuthentication" },
+        { "label": "JWT", "value": "jwt" },
+        { "label": "Outro", "value": "other" },
+        { "label": "Nao tem", "value": "nda" }
+      ]
+    }
+  ]
+}
