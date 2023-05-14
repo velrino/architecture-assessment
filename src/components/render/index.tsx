@@ -15,7 +15,7 @@ export function RenderComponent({ formData }: any) {
     useEffect(() => {
         const arr = Object.entries(formData).map(([name, value]) => {
             const nameSplited = name.split(".")
-            return { name: nameSplited[1], group: nameSplited[0], value, time: randomBetween(5, 90) }
+            return { name: nameSplited[1], group: nameSplited[0], value }
         });
 
         const groupedArr = arr.reduce((result: any, obj) => {
@@ -28,11 +28,10 @@ export function RenderComponent({ formData }: any) {
         }, {});
 
         const test = Object.keys(groupedArr)
-        console.log({ test })
 
         setGroupData(groupedArr)
 
-        const currentTotalDays = arr.reduce((total, { time }) => total + time, 0);
+        const currentTotalDays = arr.reduce((total, { value }) => total + Number(value), 0);
         const currentTotalMonth = Math.floor(currentTotalDays / 30.44);
         const currentTotalMonthDays = (currentTotalDays % 30.44);
 
@@ -47,8 +46,8 @@ export function RenderComponent({ formData }: any) {
 
     return (<>
         <Card title={<>
-            <h1>Resultado {totalDays} dias</h1>
-            <p>{totalMonth} meses e {totalMonthDays.toFixed(0)} dias</p>
+            <h1>Resultado {totalDays}</h1>
+            {/* <p>{totalMonth} meses e {totalMonthDays.toFixed(0)} dias</p> */}
         </>}>
             <Collapse activeKey={Object.keys(groupData).map((currentItem, currentIndex) => currentIndex)}>
                 {
@@ -58,8 +57,8 @@ export function RenderComponent({ formData }: any) {
                             {
                                 groupData[currentItem].map((item: any, index: any) => (<Col className="margin-bottom-small" key={index} xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 8 }} lg={{ span: 8 }}>
                                     <Card title={item.name} className="custom-card">
-                                        <p className="text-ellipsis">{item.value}</p>
-                                        <b>{item.time} dias</b>
+                                        {/* <p className="text-ellipsis">{item.value}</p> */}
+                                        <b>valor {item.value} </b>
                                     </Card>
                                 </Col>))
                             }

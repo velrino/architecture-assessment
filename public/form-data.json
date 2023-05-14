@@ -1,47 +1,1055 @@
 {
-  "principal": [
+  "architecture": [
     {
-      "label": "Qual é o tamanho do projeto que você deseja realizar?",
-      "name": "principal.projectSize",
+      "label": "Possui Documentação das aplicações, processos ou sistemas?",
+      "name": "haveDocumentation",
       "options": [
-        { "label": "Pequeno", "value": "small" },
-        { "label": "Médio", "value": "medium" },
-        { "label": "Grande", "value": "large" },
-        { "label": "Extremamente grande", "value": "extremelyLarge" }
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
       ]
     },
     {
-      "label": "Qual é o objetivo principal da sua arquitetura de software?",
-      "name": "principal.architectureObjective",
+      "label": "Possui os conceitos de SOLID",
+      "name": "haveSolidConcepts",
       "options": [
-        { "label": "Escalabilidade", "value": "scalability" },
-        { "label": "Manutenção", "value": "maintenance" },
-        { "label": "Desempenho", "value": "performance" },
-        { "label": "Outro", "value": "other" }
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Possui os conceitos de DDD",
+      "name": "haveDDDConcepts",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Possui os conceitos de Eventos",
+      "name": "haveEventConcepts",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "",
+      "name": "architecture.field1",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "reliability": [
+    {
+      "label": "Possui procedimentos de backup periódico",
+      "name": "havePeriodicBackup",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Está distribuída em mais de uma zona de disponibilidade",
+      "name": "distributedMultipleAvailabilityZones",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Está distribuída em mais de uma região de disponibilidade",
+      "name": "distributedMultipleAvailabilityRegions",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "operationalExcellence": [
+    {
+      "label": "Executa em nuvem",
+      "name": "cloudExecution",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Mantem todos os parâmetros de configuração externamente e disponíveis para gestão pelos times de infraestrutura",
+      "name": "externalConfigurationParameters",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Possui testes unitários automatizados com cobertura mínima de código aderente ao QualityGate padrão",
+      "name": "automatedUnitTests",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Utiliza hardware \"commodity\" e suporta virtualização",
+      "name": "commodityHardwareAndVirtualization",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Realiza deploy nos ambientes de DEV, HML e PRD de forma automatizada",
+      "name": "automatedDeployEnvironments",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Realiza análise estática de código (e.g. Sonar) configurado na pipe e sendo executado em todos os builds do projeto",
+      "name": "staticCodeAnalysis",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "integration": [
+    {
+      "label": "Disponibilizando os dados analiticos como streaming em near real time",
+      "name": "analyticalDataStreaming",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Segue os princípios de idempotência para as operações críticas, expostas para integração (sejam síncronas ou assíncronas)",
+      "name": "idempotencyPrinciples",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Trata os dados baseados em eventos representando fatos do domínio e contendo todos os dados relevantes para sua interpretação",
+      "name": "eventDrivenDataProcessing",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Implementa mecanismos de proteção de nível de serviço (Rate Limit e Throttling) individualmente para cada consumidor",
+      "name": "serviceLevelProtection",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Faz uso de Anti Corruption Layer para desacoplar a sua implementação dos sistemas legados e/ou de terceiros",
+      "name": "antiCorruptionLayer",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Não permite que aplicações externas alterem seus dados exceto por meio das funcionalidades/APIs expostas",
+      "name": "restrictExternalWriteAccess",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "observability": [
+    {
+      "label": "Gera métricas, logs e traces acessíveis em tempo real aos times de engenharia, infraestrutura e operações",
+      "name": "realTimeMetricsLogsTraces",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Possui notificações e alarmes para os responsáveis pelo acompanhamento da solução",
+      "name": "notificationsAlarms",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Possui procedimento para suporte e troubleshooting documentados",
+      "name": "supportTroubleshootingProcedure",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Possui dashboard para monitorar métricas de experiência do usuário e negócio",
+      "name": "userExperienceMetricsDashboard",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Está listado em painel ou dashboard contendo os SLOs, SLIs e Error Budgets para análise e acompanhamento",
+      "name": "slosSlisErrorBudgetsDashboard",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "practiceProcesses": [
+    {
+      "label": "Possui documentação dos requisitos funcionais importantes para o negócio",
+      "name": "documentacaoRequisitosFuncionais",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Possui documentação dos requisitos não funcionais importantes para o negócio",
+      "name": "documentacaoRequisitosNaoFuncionais",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Possui modelagem do domínio e capacidades de negócio para o escopo da solução",
+      "name": "modelagemDominioCapacidadesNegocio",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Implementa somente as funcionalidades do domínio relacionado (não há invasão de domínios)",
+      "name": "implementacaoFuncionalidadesDominioRelacionado",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Está representado em um documento HLD (High-level Design)",
+      "name": "documentoHLD",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
       ]
     }
   ],
   "security": [
     {
-      "label": "Qual é o nível de sensibilidade dos dados manipulados pelo seu sistema?",
-      "name": "security.securityArchitecture",
+      "label": "Mantém todos os segredos necessários em solução de cofre de chaves",
+      "name": "segredosCofreChaves",
       "options": [
-        { "label": "Baixa", "value": "low" },
-        { "label": "Média", "value": "medium" },
-        { "label": "Alta", "value": "high" },
-        { "label": "Não sei", "value": "dontKnow" }
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
       ]
     },
     {
-      "label": "Qual é a política de autenticação de usuários do seu sistema?",
-      "name": "security.authenticationPolicy",
+      "label": "Exige autenticação no acesso/integração de origem externa/pública",
+      "name": "autenticacaoAcessoIntegracaoExterna",
       "options": [
-        { "label": "Senha única", "value": "uniquePassword" },
-        { "label": "Senha e autenticação de dois fatores", "value": "passwordAndTwoFactorAuthentication" },
-        { "label": "Autenticação com certificado digital", "value": "digitalCertificateAuthentication" },
-        { "label": "JWT", "value": "jwt" },
-        { "label": "Outro", "value": "other" },
-        { "label": "Nao tem", "value": "nda" }
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Exige autenticação no acesso/integração de origem interna/privada",
+      "name": "autenticacaoAcessoIntegracaoInterna",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Utiliza Managed Identity na autenticação do acesso/integração de origem interna/privada",
+      "name": "managedIdentityAcessoIntegracaoInterna",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Respeita o princípio de 'Least Privilege' para todas as permissões de acesso concedidas",
+      "name": "principioLeastPrivilege",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Utiliza protocolos de comunicação seguros (criptografados) em todas as integrações com outros componentes ou recursos",
+      "name": "protocolosComunicacaoSeguros",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Utiliza criptografia para proteção de todos os dados armazenados",
+      "name": "criptografiaDadosArmazenados",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Gera logs de auditoria para todas as operações de origem externa",
+      "name": "logsAuditoriaOperacoesExterna",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Gera logs de auditoria para todas as operações de origem interna",
+      "name": "logsAuditoriaOperacoesInterna",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "label": "Possui isolamento de rede para os recursos utilizados, evitando conectividade indevida de terceiros",
+      "name": "isolamentoRedeRecursos",
+      "options": [
+        {
+          "label": "Atende",
+          "value": 3
+        },
+        {
+          "label": "Atende em parte",
+          "value": 1
+        },
+        {
+          "label": "Não atende",
+          "value": -1
+        },
+        {
+          "label": "Não se Aplica",
+          "value": 0
+        },
+        {
+          "label": "Não sei responder",
+          "value": 0
+        }
       ]
     }
   ]

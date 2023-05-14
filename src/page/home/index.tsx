@@ -4,14 +4,11 @@ import axios from 'axios';
 
 import { AssessmentForm } from "../../components/form";
 import { RenderComponent } from "../../components/render";
+import { JsonEditorComponent } from "../../components/json-editor";
 
 export function HomePage() {
-    const [formData, setFormData] = useState({});
+    const [resultData, setResultData] = useState({});
     const [dynamicForm, setDynamicForm] = useState({});
-
-    const handleFormChange = (values: any) => {
-        setFormData(values);
-    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,15 +26,42 @@ export function HomePage() {
         fetchData();
     }, []);
 
+    const handleSave = (updatedJsonData: any) => {
+        setDynamicForm(updatedJsonData);
+    }
+
+    const handleResult = (values: any) => {
+        setResultData(values);
+    };
 
     return (
         <div className="top-page">
             <Row gutter={20}>
+                <Col className="margin-bottom-small" xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 3 }}>
+                    <JsonEditorComponent
+                        initialJsonData={dynamicForm}
+                        onSave={handleSave}
+                        buttonLabel="Editor do formulario"
+                        modalTitle="JSON Editor - formulario"
+                        canEdit={true}
+                    />
+                </Col>
+                <Col className="margin-bottom-small" xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 3 }}>
+                    <JsonEditorComponent
+                        initialJsonData={resultData}
+                        onSave={handleResult}
+                        buttonLabel="JSON da Reposta"
+                        modalTitle="JSON Editor - Reposta"
+                        canEdit={false}
+                    />
+                </Col>
+            </Row>
+            <Row gutter={20}>
                 <Col className="margin-bottom-small" xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 12 }}>
-                    <AssessmentForm onChange={handleFormChange} dynamicForm={dynamicForm} />
+                    <AssessmentForm onChange={handleResult} dynamicForm={dynamicForm} />
                 </Col>
                 <Col className="margin-bottom-small result-form" xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 12 }}>
-                    <RenderComponent formData={formData} />
+                    <RenderComponent formData={resultData} />
                 </Col>
             </Row>
         </div>
