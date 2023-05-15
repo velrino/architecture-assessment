@@ -103,32 +103,6 @@
           "value": null
         }
       ]
-    },
-    {
-      "label": "",
-      "name": "architecture.field1",
-      "options": [
-        {
-          "label": "Atende",
-          "value": 3
-        },
-        {
-          "label": "Atende em parte",
-          "value": 1
-        },
-        {
-          "label": "Não atende",
-          "value": -1
-        },
-        {
-          "label": "Não se Aplica",
-          "value": 0
-        },
-        {
-          "label": "Não sei responder",
-          "value": null
-        }
-      ]
     }
   ],
   "reliability": [
@@ -291,7 +265,7 @@
       ]
     },
     {
-      "label": "Utiliza hardware \"commodity\" e suporta virtualização",
+      "label": "Utiliza hardware commodity e suporta virtualização",
       "name": "commodityHardwareAndVirtualization",
       "options": [
         {
