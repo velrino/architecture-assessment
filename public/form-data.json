@@ -22,7 +22,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -48,7 +48,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -74,7 +74,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -100,7 +100,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -126,7 +126,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     }
@@ -154,7 +154,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -180,7 +180,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -206,7 +206,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     }
@@ -234,7 +234,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -260,7 +260,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -286,7 +286,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -312,7 +312,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -338,7 +338,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -364,7 +364,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     }
@@ -392,7 +392,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -418,7 +418,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -444,7 +444,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -470,7 +470,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -496,7 +496,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -522,7 +522,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     }
@@ -550,7 +550,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -576,7 +576,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -602,7 +602,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -628,7 +628,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -654,7 +654,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     }
@@ -682,7 +682,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -708,7 +708,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -734,7 +734,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -760,7 +760,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -786,7 +786,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     }
@@ -814,7 +814,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -840,7 +840,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -866,7 +866,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -892,7 +892,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -918,7 +918,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -944,7 +944,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -970,7 +970,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -996,7 +996,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -1022,7 +1022,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     },
@@ -1048,7 +1048,7 @@
         },
         {
           "label": "Não sei responder",
-          "value": 0
+          "value": null
         }
       ]
     }
