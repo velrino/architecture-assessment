@@ -31,7 +31,8 @@ export function RenderComponent({ formData }: any) {
 
         setGroupData(groupedArr)
 
-        const currentTotalDays = arr.reduce((total, { value }) => total + Number(value), 0);
+        const currentTotalDays = Math.max(arr.reduce((total, { value }) => total + Number(value), 0), 0);
+   
         const currentTotalMonth = Math.floor(currentTotalDays / 30.44);
         const currentTotalMonthDays = (currentTotalDays % 30.44);
 
