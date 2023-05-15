@@ -58,7 +58,7 @@ export function RenderComponent({ formData }: any) {
                                 groupData[currentItem].map((item: any, index: any) => (<Col className="margin-bottom-small" key={index} xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 8 }} lg={{ span: 8 }}>
                                     <Card title={item.name} className="custom-card">
                                         {/* <p className="text-ellipsis">{item.value}</p> */}
-                                        <b>valor {item.value} </b>
+                                        <b>valor {(item.value) ? item.value : 0} </b>
                                     </Card>
                                 </Col>))
                             }
