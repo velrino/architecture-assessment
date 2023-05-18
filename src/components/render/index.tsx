@@ -25,14 +25,14 @@ export function RenderComponent({ formData }: any) {
     const [chartData, setChartData] = useState<any>({});
 
     function handleChart() {
-        let lastColor = "#1F75FE";
+        let lastColor = "#25aa1e";
         const colors = Object.keys(totalByGroup).map((item: any, index: number) => {
-            if (lastColor === "#1F75FE" && index !== 0) {
-                lastColor = "#74BBFB"
-            } else if (lastColor === "#74BBFB") {
-                lastColor = "#00008B"
-            } else if (lastColor === "#00008B") {
-                lastColor = "#1F75FE"
+            if (lastColor === "#25aa1e" && index !== 0) {
+                lastColor = "#25aa1e91"
+            } else if (lastColor === "#25aa1e91") {
+                lastColor = "#25aa1e40"
+            } else if (lastColor === "#25aa1e40") {
+                lastColor = "#25aa1e"
             }
 
             return lastColor;
@@ -76,15 +76,15 @@ export function RenderComponent({ formData }: any) {
                             color: 'black',
                         },
                     },
-                    tooltip: {
-                        callbacks: {
-                            label: function (context: any) {
-                                const label = context.label || '';
-                                const value = context.parsed;
-                                return `${label}: ${value.toFixed(2)}%`;
-                            },
-                        },
-                    },
+                    // tooltip: {
+                    //     callbacks: {
+                    //         label: function (context: any) {
+                    //             const label = context.label || '';
+                    //             const value = context.parsed;
+                    //             return `${label}: ${value.toFixed(2)}%`;
+                    //         },
+                    //     },
+                    // },
                 },
             }
         }
