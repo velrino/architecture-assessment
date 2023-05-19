@@ -1,6 +1,7 @@
-import { Badge, Card, Col, Collapse, Row } from "antd";
+import { Badge, Card, Col, Collapse, Divider, Row, Space } from "antd";
 import { useEffect, useState } from "react";
 import { DoughnutCustomChartComponent } from "../charts";
+import { Trans } from "react-i18next";
 
 export function RenderComponent({ formData }: any) {
     const [groupData, setGroupData] = useState<any>({});
@@ -145,8 +146,15 @@ export function RenderComponent({ formData }: any) {
                             {
                                 groupData[currentItem].map((item: any, index: any) => (<Col className="margin-bottom-small" key={index} xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 8 }} lg={{ span: 8 }}>
                                     <Card title={`${item.name}`} className="custom-card">
-                                        {/* <p className="text-ellipsis">{item.value}</p> */}
-                                        <b>valor {(item.value) ? item.value : 0} </b>
+                                        <Space align="baseline">
+                                            <b className="mock-block">Opção</b>
+                                            <span className="mock-block">{<Trans i18nKey={"render_values." + item.value} />}</span>
+                                        </Space>
+                                        <Divider />
+                                        <Space align="baseline">
+                                            <b className="mock-block">Valor</b>
+                                            <span className="mock-block">{(typeof item.value === 'number') ? item.value : 0}</span>
+                                        </Space>
                                     </Card>
                                 </Col>))
                             }
