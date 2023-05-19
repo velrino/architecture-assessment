@@ -16,7 +16,7 @@ export function Main() {
     };
 
     return (
-        <div className="main">
+        <div>
             {/* <Layout.Sider trigger={null} collapsible collapsed={collapsed}>
                 <div className="logo" />
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>

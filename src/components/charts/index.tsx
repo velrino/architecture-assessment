@@ -27,6 +27,6 @@ ChartJS.register(
     Legend
 );
 
-export function DoughnutCustomChartComponent({ properties }: any) {
+export function DoughnutCustomChartComponent({ properties }: any) : any {
     return <Doughnut {...properties} />;
 }

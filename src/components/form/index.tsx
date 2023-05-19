@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Radio, Button, Tabs, Card } from 'antd';
+import { Trans } from 'react-i18next';
 
 export const AssessmentForm = ({ onChange, dynamicForm }: any) => {
     let [form, setForm] = useState<any>({})
@@ -21,7 +22,7 @@ export const AssessmentForm = ({ onChange, dynamicForm }: any) => {
 
     const renderFormItems = () => {
         return Object.entries(currentDynamicForm).map(([tabKey, formItems]: any) => (
-            <Tabs.TabPane tab={tabKey} key={tabKey}>
+            <Tabs.TabPane tab={<>{<Trans i18nKey={"form_tabs." + tabKey} />}</>} key={tabKey}>
                 {formItems.map((item: any, index: any) => (
                     <Form.Item key={index} label={item.label} name={item.name}>
                         <Radio.Group

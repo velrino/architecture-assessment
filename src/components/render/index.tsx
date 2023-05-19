@@ -2,11 +2,20 @@ import { Badge, Card, Col, Collapse, Divider, Row, Space } from "antd";
 import { useEffect, useState } from "react";
 import { DoughnutCustomChartComponent } from "../charts";
 import { Trans } from "react-i18next";
+import { Emitter } from "../../utils/emitter";
 
 export function RenderComponent({ formData }: any) {
     const [groupData, setGroupData] = useState<any>({});
     const [totalByGroup, setTotalByGroup] = useState<any>({});
     const [total, setTotal] = useState<number>(0);
+
+    let [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+    useEffect(() => {
+        Emitter.EventEmitter.addListener(Emitter.Event.Action.ChangeTheme, (result: any) => {
+            setIsDarkMode(result)
+        })
+    }, [])
 
     const calculateTotal = (data: any) => {
         return Math.max(data.reduce((total: any, { value }: any) => total + Number((typeof value === 'number') ? value : 0 || 0), 0), 0)
@@ -59,33 +68,21 @@ export function RenderComponent({ formData }: any) {
                 plugins: {
                     datalabels: {
                         display: true,
-                        color: 'black',
                         font: {
                             size: 14,
                         },
-                        // formatter: (value: any) => {
-                        //     return `${value.toFixed(2)}`
-                        // },
+                        color: (isDarkMode) ? 'white' : 'black',
                         align: 'end',
                         anchor: 'end',
                     },
                     legend: {
                         display: true,
-                        position: 'bottom',
+                        position: 'right',
                         labels: {
                             padding: 20,
-                            color: 'black',
+                            color: (isDarkMode) ? 'white' : 'black',
                         },
                     },
-                    // tooltip: {
-                    //     callbacks: {
-                    //         label: function (context: any) {
-                    //             const label = context.label || '';
-                    //             const value = context.parsed;
-                    //             return `${label}: ${value.toFixed(2)}%`;
-                    //         },
-                    //     },
-                    // },
                 },
             }
         }
@@ -94,7 +91,7 @@ export function RenderComponent({ formData }: any) {
 
     useEffect(() => {
         handleChart()
-    }, [totalByGroup])
+    }, [totalByGroup, isDarkMode])
 
     useEffect(() => {
         const arr = Object.entries(formData).map(([name, value]) => {
@@ -139,7 +136,7 @@ export function RenderComponent({ formData }: any) {
                 }
                 {
                     Object.keys(groupData).map((currentItem, currentIndex) => (<Collapse.Panel header={<>
-                        {currentItem} <strong>{totalByGroup[currentItem]}</strong>
+                        {<Trans i18nKey={"form_tabs." + currentItem} />} <strong>{totalByGroup[currentItem]}</strong>
                     </>} key={currentIndex}>
                         {/* <p>{groupData[item]}</p> */}
                         <Row gutter={10}>

@@ -5,6 +5,7 @@ import axios from 'axios';
 import { AssessmentForm } from "../../components/form";
 import { RenderComponent } from "../../components/render";
 import { JsonEditorComponent } from "../../components/json-editor";
+import { ChangeThemeComponent } from "../../components/change-theme";
 
 export function HomePage() {
     const [resultData, setResultData] = useState({});
@@ -36,7 +37,7 @@ export function HomePage() {
 
     return (
         <div className="top-page">
-            <Row gutter={20}>
+            <Row gutter={20} align={"middle"}>
                 <Col className="margin-bottom-small" xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 3 }}>
                     <JsonEditorComponent
                         initialJsonData={dynamicForm}
@@ -54,6 +55,9 @@ export function HomePage() {
                         modalTitle="JSON Editor - Reposta"
                         canEdit={false}
                     />
+                </Col>
+                <Col className="margin-bottom-small" xs={{ span: 24 }} sm={{ span: 24 }} md={{ span: 12 }} lg={{ span: 3 }}>
+                    <ChangeThemeComponent />
                 </Col>
             </Row>
             <Row gutter={20}>
